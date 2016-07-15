@@ -2,8 +2,6 @@ package dmytro.test;
 
 import dmytro.BinaryTree;
 import dmytro.BinaryTreeTraversal;
-import dmytro.test.data.Animal;
-import dmytro.test.data.Cat;
 
 public class Test {
 

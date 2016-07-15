@@ -3,11 +3,8 @@ package dmytro;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-
-import javax.management.Query;
 
 public class BinaryTreeTraversal {
 
@@ -125,16 +122,9 @@ public class BinaryTreeTraversal {
 		}
 
 		List<T> treeElements = new ArrayList<T>();
-		treeElements.add(binaryTree.root);
-
 		Queue<BinaryTree<? extends T>> queue = new ArrayDeque<BinaryTree<? extends T>>();
-		if (binaryTree.left != null) {
-			queue.add(binaryTree.left);
-		}
-		if (binaryTree.right != null) {
-			queue.add(binaryTree.right);
-		}
-
+		queue.add(binaryTree);
+		
 		while (!queue.isEmpty()) {
 			BinaryTree<? extends T> element = queue.remove();
 			treeElements.add(element.root);
